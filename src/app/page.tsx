@@ -1,34 +1,29 @@
 "use client";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Player from "@/components/lottie-player";
 
 export default function Home() {
   return (
-    <div>
-      <ol className="list-inside list-decimal text-sm text-center sm:text-left">
-        <li className="mb-2">
-          Get started by editing
-          <code className="bg-black/[.05] dark:bg-white/[.0.2] px-1 py-0.5 rounded font-semibold ml-2">
-            src/app/page.tsx
-          </code>
-          .
-        </li>
-        <li>Save and see your changes instantly.</li>
-      </ol>
-      <Button asChild variant="default">
-        <Link href="/about" rel="noopener noreferrer">
-          About me
-        </Link>
-      </Button>
-      <Button asChild variant="default">
-        <Link
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          rel="noopener noreferrer"
-        >
-          Read our docs
-        </Link>
-      </Button>
+    <div className="flex flex-col md:flex-row justify-start md:justify-center items-center min-h-0 md:min-h-[calc(100vh-80px)] gap-6 pt-8 md:pt-0 animate-in fade-in-0 px-8 linear-ease duration-1000">
+      <div className="flex grow basis-1 flex-col gap-6">
+        <div className="flex flex-col gap-4">
+          <p className="text-3xl lg:text-5xl italic">Hello, my name is</p>
+          <p className="text-7xl font-bold">Michael Persson</p>
+        </div>
+        <p className="text-2xl max-w-2xl">
+          I&apos;m a Trondheim-based <b>UX engineer</b> passionate about
+          creating beautiful and functional user experiences.
+        </p>
+        <Button asChild variant="default" size="lg" className="w-fit">
+          <Link href="/about" rel="noopener noreferrer">
+            About me
+          </Link>
+        </Button>
+      </div>
+      <div className="flex grow max-w-[200px] md:max-w-sm basis-1">
+        <Player />
+      </div>
     </div>
   );
 }

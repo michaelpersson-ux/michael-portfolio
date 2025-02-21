@@ -22,7 +22,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SiteHeader />
           <div className="flex justify-center">
-            <div className="flex w-screen max-w-5xl flex-row items-center p-8">
+            <div
+              className={`flex w-screen min-h-screen mt-[-80px] pt-[80px] max-w-5xl flex-row`}
+            >
               {children}
             </div>
           </div>

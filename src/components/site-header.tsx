@@ -1,12 +1,11 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Switch } from "@/components/ui/switch";
-import { Separator } from "@/components/ui/separator";
-import { Bird, Link } from "lucide-react";
+import { Gem } from "lucide-react";
 import { Moon } from "lucide-react";
 import { Sun } from "lucide-react";
-import { Button } from "./ui/button";
 
 export function SiteHeader() {
   const { setTheme } = useTheme();
@@ -25,13 +24,18 @@ export function SiteHeader() {
   }, [themeMode]);
 
   return (
-    <div className="flex justify-center bg-primary">
-      <div className="p-3 flex w-screen max-w-5xl flex-row items-center text-primary-foreground justify-between">
-        <div className="flex flex-row items-center h-6 gap-2">
-          <Bird />
-          <p className="font-bold text-xl">Michael Persson</p>
-          <Separator orientation="vertical" />
-          <p className="font-light antialiased text-xl">UX Portfolio</p>
+    <div className="flex justify-center w-screen h-[80px] bg-primary z-10">
+      <div className="p-3 flex w-full max-w-5xl flex-row items-center text-primary-foreground justify-between">
+        <div className="flex flex-row items-center gap-2">
+          <Link
+            href="/"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 select-none"
+          >
+            <Gem />
+            <p className="font-bold text-xl">Michael Persson</p>
+            <p className="font-light text-xl">UX</p>
+          </Link>
         </div>
         <div className="flex items-center gap-2">
           <div>
