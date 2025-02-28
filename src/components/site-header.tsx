@@ -1,11 +1,11 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { Switch } from "@/components/ui/switch";
 import { Gem } from "lucide-react";
 import { Moon } from "lucide-react";
 import { Sun } from "lucide-react";
+import TransitionHelper from "@/components/transition-helper";
 
 export function SiteHeader() {
   const { setTheme } = useTheme();
@@ -24,19 +24,15 @@ export function SiteHeader() {
   }, [themeMode]);
 
   return (
-    <div className="flex justify-center w-screen h-[80px] bg-primary z-10">
-      <div className="px-6 flex w-full max-w-5xl flex-row items-center text-primary-foreground justify-between">
-        <div className="flex flex-row items-center gap-2">
-          <Link
-            href="/"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 select-none"
-          >
+    <div className="flex justify-center w-full h-[80px] bg-primary">
+      <div className="px-6 flex w-full max-w-5xl flex-row items-center text-primary-foreground justify-between z-10">
+        <TransitionHelper url={"/"}>
+          <div className="flex flex-row items-center gap-2">
             <Gem />
             <p className="font-bold text-xl">Michael Persson</p>
             <p className="font-light text-xl">UX</p>
-          </Link>
-        </div>
+          </div>
+        </TransitionHelper>
         <div className="flex items-center gap-2">
           <div>
             {themeMode != "light" ? (
@@ -46,7 +42,7 @@ export function SiteHeader() {
             )}
           </div>
           <Switch
-            className={"invert data-[state=unchecked]:bg-primary"}
+            className="invert data-[state=unchecked]:bg-primary"
             checked={themeMode === "light"}
             onCheckedChange={toggleTheme}
           />

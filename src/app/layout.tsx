@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Providers } from "@/components/providers";
 import { SiteHeader } from "@/components/site-header";
+import { SiteContent } from "@/components/site-content";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,17 +19,11 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </head>
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <body className="overflow-y-scroll">
+        <Providers>
           <SiteHeader />
-          <div className="flex justify-center">
-            <div
-              className={`flex w-screen min-h-screen mt-[-80px] pt-[80px] max-w-5xl flex-row`}
-            >
-              {children}
-            </div>
-          </div>
-        </ThemeProvider>
+          <SiteContent>{children}</SiteContent>
+        </Providers>
       </body>
     </html>
   );

@@ -1,16 +1,37 @@
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import TransitionHelper from "@/components/transition-helper";
 import { ChevronLeft } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="flex flex-col gap-2 animate-in fade-in-20 ease-out duration-700">
-      <p>About</p>
-      <Button asChild variant="default">
-        <Link href="/" rel="noopener noreferrer" className="pl-2">
-          <ChevronLeft /> Back
-        </Link>
-      </Button>
-    </div>
+    <>
+      <div className="flex grow basis-1 flex-col gap-8">
+        <p className="text-2xl max-w-2xl">
+          I&apos;m a Trondheim-based <b>UX engineer</b> passionate about
+          creating beautiful and functional user experiences.
+        </p>
+        <div className="flex gap-2">
+          <TransitionHelper url="/">
+            <Button
+              variant="default"
+              size="lg"
+              className="w-fit cursor-pointer"
+            >
+              Return
+            </Button>
+          </TransitionHelper>
+
+          <Button
+            variant="secondary"
+            size="lg"
+            className="w-fit cursor-pointer"
+          >
+            <TransitionHelper url="/case-studies">
+              Case studies
+            </TransitionHelper>
+          </Button>
+        </div>
+      </div>
+    </>
   );
 }
