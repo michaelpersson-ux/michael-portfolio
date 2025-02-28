@@ -15,7 +15,7 @@ export default function Home() {
     const href = event.currentTarget.getAttribute("href") || "/";
     setTimeout(() => {
       router.push(href);
-    }, 900);
+    }, 850);
   }
 
   return (
