@@ -25,7 +25,7 @@ export function SiteHeader() {
 
   return (
     <div className="flex justify-center w-screen h-[80px] bg-primary z-10">
-      <div className="p-3 flex w-full max-w-5xl flex-row items-center text-primary-foreground justify-between">
+      <div className="px-6 flex w-full max-w-5xl flex-row items-center text-primary-foreground justify-between">
         <div className="flex flex-row items-center gap-2">
           <Link
             href="/"

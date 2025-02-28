@@ -6,6 +6,21 @@ body {
   font-family: InterVariable, sans-serif;
 }
 
+@theme {
+  --animate-m-enter: enter 1s ease-in;
+
+  @keyframes enter {
+    0% {
+      opacity: 0%;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 10%;
+      transform: translateY(0px);
+    }
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
