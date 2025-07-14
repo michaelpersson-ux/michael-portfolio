@@ -24,33 +24,28 @@ export default function TransitionHelper({
       return;
     }
     if (transition.transitioning) {
-      // Prevent multiple calls if already transitioning
+      // Prevent multiple calls if transition is already in progress
       return;
     }
     transition.setTransitioning(true);
     const waitForTransitionEnd = new Promise<void>((resolve) => {
-      const transitionContainer = document.getElementById(
-        "transition-container"
-      );
+      const transitionContainer = transition.container.current;
       if (!transitionContainer) {
         console.warn("Transition container not found.");
         resolve();
         router.push(href);
         return;
       }
-      const onTransitionEnd = (event: TransitionEvent) => {
-        transitionContainer.removeEventListener(
-          "transitionend",
-          onTransitionEnd
-        );
+      const onAnimationEnd = (event: AnimationEvent) => {
+        transitionContainer.removeEventListener("animationend", onAnimationEnd);
         resolve();
       };
-      transitionContainer.addEventListener("transitionend", onTransitionEnd);
+      transitionContainer.addEventListener("animationend", onAnimationEnd);
     });
 
     await waitForTransitionEnd;
-    router.push(href);
     transition.setTransitioning(false);
+    router.push(href);
   }
 
   return (

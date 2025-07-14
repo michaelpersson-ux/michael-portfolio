@@ -1,16 +1,21 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import TransitionContext from "./transition-context";
+import { RefObject } from "react";
 
 interface SiteContentProps {
   children: React.ReactNode;
 }
 
 export function SiteContent({ children }: SiteContentProps) {
-  const transition = React.useContext(TransitionContext);
+  const transition = React.useContext(TransitionContext) as {
+    container: RefObject<HTMLDivElement | null>;
+    transitioning: boolean;
+  };
   return (
     <div className="flex justify-center">
       <div
+        ref={transition.container}
         id="transition-container"
         className={
           "flex w-full min-h-screen mt-[-80px] pt-[80px] max-w-5xl flex-row" +
