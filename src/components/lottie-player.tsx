@@ -19,9 +19,10 @@ const Player = () => {
           src={pig}
           loop
           autoplay
+          speed={1}
           height={400}
           width={350}
-          renderConfig={{ autoResize: true }}
+          renderConfig={{ autoResize: false }}
         />
       </div>
       {/*       <div

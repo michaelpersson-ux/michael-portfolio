@@ -46,8 +46,8 @@
 }
 
 @theme {
-  --animate-m-enter: m-enter 1s ease-in-out forwards;
-  --animate-m-exit: m-exit 1s ease-in-out forwards;
+  --animate-m-enter: m-enter 1500ms ease-in-out forwards;
+  --animate-m-exit: m-exit 1500ms ease-in-out forwards;
 
   @keyframes m-enter {
     0% {

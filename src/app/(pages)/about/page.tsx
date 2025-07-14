@@ -20,16 +20,15 @@ export default function About() {
               Return
             </Button>
           </TransitionHelper>
-
-          <Button
-            variant="secondary"
-            size="lg"
-            className="w-fit cursor-pointer"
-          >
-            <TransitionHelper url="/case-studies">
+          <TransitionHelper url="/case-studies">
+            <Button
+              variant="secondary"
+              size="lg"
+              className="w-fit cursor-pointer"
+            >
               Case studies
-            </TransitionHelper>
-          </Button>
+            </Button>
+          </TransitionHelper>
         </div>
       </div>
     </>

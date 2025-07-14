@@ -11,6 +11,7 @@ export function SiteContent({ children }: SiteContentProps) {
   return (
     <div className="flex justify-center">
       <div
+        id="transition-container"
         className={
           "flex w-full min-h-screen mt-[-80px] pt-[80px] max-w-5xl flex-row" +
           (transition.transitioning ? " animate-m-exit" : " animate-m-enter")
