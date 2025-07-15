@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import { LoaderCircle } from "lucide-react";
 import pig from "../../public/pig.lottie";
 
 const Player = () => {
-  const [lottieLoaded, setLottieLoaded] = React.useState(true);
+  //const [lottieLoaded, setLottieLoaded] = React.useState(true);
 
   return (
     <>
@@ -25,13 +24,6 @@ const Player = () => {
           renderConfig={{ autoResize: false }}
         />
       </div>
-      {/*       <div
-        className={
-          "flex grow justify-center items-center h-full" + (lottieLoaded ? " hidden" : "")
-        }
-      >
-        <LoaderCircle className="animate-spin" />
-      </div> */}
     </>
   );
 };

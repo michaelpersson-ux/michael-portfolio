@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Design",
+    "badge": "UX",
+    "description": "Design phase overview",
+    "startdate": "2023-03-01",
+    "enddate": "2023-03-08"
+  },
+  {
+    "id": 2,
+    "title": "Development",
+    "badge": "Coding",
+    "description": "Development phase details",
+    "startdate": "2023-04-01",
+    "enddate": "2023-04-08"
+  },
+  {
+    "id": 3,
+    "title": "Testing",
+    "badge": "UX",
+    "description": "Testing phase details",
+    "startdate": "2023-05-01",
+    "enddate": "2023-05-08"
+  },
+  {
+    "id": 4,
+    "title": "Deployment",
+    "badge": "DevOps",
+    "description": "Deployment phase overview",
+    "startdate": "2023-06-01",
+    "enddate": "2023-06-08"
+  },
+  {
+    "id": 5,
+    "title": "Feedback",
+    "badge": "UX",
+    "description": "Feedback and iteration",
+    "startdate": "2023-07-01",
+    "enddate": "2023-07-08"
+  },
+  {
+    "id": 6,
+    "title": "Final Review",
+    "badge": "UX",
+    "description": "Final review of the project",
+    "startdate": "2023-08-01",
+    "enddate": "2023-08-08"
+  },
+  {
+    "id": 7,
+    "title": "Conclusion",
+    "badge": "UX",
+    "description": "Project conclusion and summary",
+    "startdate": "2023-09-01",
+    "enddate": "2023-09-08"
+  },
+  {
+    "id": 8,
+    "title": "Post-Project Review",
+    "badge": "Retrospective",
+    "description": "Post-project review and lessons learned",
+    "startdate": "2023-09-01",
+    "enddate": "2023-09-08"
+  },
+  {
+    "id": 9,
+    "title": "Project Closure",
+    "badge": "Retrospective",
+    "description": "Project closure and final documentation",
+    "startdate": "2023-09-01",
+    "enddate": "2023-09-08"
+  }
+]

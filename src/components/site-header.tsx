@@ -1,19 +1,15 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { Switch } from "@/components/ui/switch";
 import { Gem } from "lucide-react";
 import { Moon } from "lucide-react";
 import { Sun } from "lucide-react";
-import TransitionContext, {
-  TransitionContextProvider,
-} from "./transition-context";
 import TransitionHelper from "@/components/transition-helper";
 
 export function SiteHeader() {
   const { setTheme } = useTheme();
   const [themeMode, setThemeMode] = useState("light");
-  const transition = useContext(TransitionContext);
 
   const toggleTheme = () => {
     if (themeMode === "light") {
@@ -37,11 +33,6 @@ export function SiteHeader() {
             <p className="font-light text-xl">UX</p>
           </div>
         </TransitionHelper>
-        <div>
-          <p className="hidden md:flex font-bold text-xl">
-            {transition.transitioning.toString()}
-          </p>
-        </div>
         <div className="flex items-center gap-2">
           <div>
             {themeMode != "light" ? (

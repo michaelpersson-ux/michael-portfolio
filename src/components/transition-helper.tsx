@@ -36,7 +36,7 @@ export default function TransitionHelper({
         router.push(href);
         return;
       }
-      const onAnimationEnd = (event: AnimationEvent) => {
+      const onAnimationEnd = () => {
         transitionContainer.removeEventListener("animationend", onAnimationEnd);
         resolve();
       };
